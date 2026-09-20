@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Julissa and Stefano//Wedding Website//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:julissa-stefano-wedding-week@julissa-stefano-2027
+DTSTAMP:20260919T000000Z
+DTSTART:20270901T180000Z
+DTEND:20270903T110000Z
+SUMMARY:Julissa & Stefano's Wedding in Sicily
+LOCATION:Scopello, Sicily, Italy
+DESCRIPTION:Welcome Party: September 1, 2027 at 8:00 PM at Tonnara di Scopello.\nWedding: September 2, 2027 at 4:00 PM at Chiesa San Giuseppe, Castellammare del Golfo, followed by cocktails, dinner and dancing at Tonnara di Scopello.\nFarewell Brunch: September 3, 2027 at 10:00 AM at Ristorante Bar Nettuno Scopello.
+END:VEVENT
+END:VCALENDAR

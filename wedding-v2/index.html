@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Julissa & Stefano — September 2, 2027, Tonnara di Scopello, Sicily, Italy">
+  <title>Julissa & Stefano — Sicily, 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,ital,wght@6..96,0,400;6..96,0,500;6..96,0,600;6..96,0,700;6..96,1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f4f0d7;
+      --paper: #f4f0d7;
+      --ink: #aa403e;
+      --olive: #aa403e;
+      --olive-dark: #aa403e;
+      --clay: #aa403e;
+      --blush: #f4f0d7;
+      --line: rgba(170,64,62,.35);
+      --display: "Bodoni Moda", Didot, "Bodoni 72", Georgia, serif;
+      --script: "Snell Roundhand", "Edwardian Script ITC", "Brush Script MT", cursive;
+      --sans: "DM Sans", Arial, sans-serif;
+      --heart-cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23aa403e' d='M12 21.35 2.9 12.24A5.7 5.7 0 0 1 11 4.18L12 5.2l1.01-1.02a5.7 5.7 0 0 1 8.09 8.06Z'/%3E%3C/svg%3E") 12 12, pointer;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.58; }
+    body, body * { cursor: var(--heart-cursor); }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    .topbar { position: sticky; inset: 0 0 auto; z-index: 10; background: var(--cream); border-bottom: 1px solid var(--line); }
+    .topbar__inner { min-height: 68px; max-width: 1400px; padding: 0 3.4vw; margin: auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+    .monogram { font-family: var(--display); font-size: 1.45rem; font-style: italic; text-decoration: none; letter-spacing: -.05em; }
+    .nav { display: flex; justify-content: center; gap: clamp(15px, 2.2vw, 38px); }
+    .nav a, .nav-toggle { color: var(--ink); font-size: .67rem; text-transform: uppercase; letter-spacing: .16em; text-decoration: none; white-space: nowrap; }
+    .nav a { position: relative; padding: 8px 0; }
+    .nav a::after { content: ""; position: absolute; inset: auto 0 3px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .25s ease; }
+    .nav a:hover::after, .nav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+    .nav-cta { justify-self: end; color: var(--cream); background: var(--ink); border: 1px solid var(--ink); border-radius: 999px; padding: 11px 20px 10px; font-size: .75rem; font-weight: 600; letter-spacing: .15em; text-decoration: none; text-transform: uppercase; }
+    .nav-toggle { display: none; justify-self: end; background: none; border: 0; cursor: var(--heart-cursor); padding: 8px 0; }
+
+    .hero { min-height: calc(100svh - 68px); padding: clamp(52px,7vw,105px) 3.4vw 4.8vw; display: flex; flex-direction: column; align-items: center; max-width: 1180px; margin: auto; }
+    .hero-copy { position: relative; z-index: 1; text-align: center; }
+    .eyebrow { display: none; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { color: var(--ink); font: 400 clamp(4.7rem, 11.5vw, 10rem)/.7 var(--script); letter-spacing: -.07em; margin: 0; }
+    h1 span { display: block; margin: .12em 0 .04em; font-size: .4em; line-height: .8; letter-spacing: 0; }
+    .hero-date { padding-top: 26px; margin: 0 0 clamp(36px,5vw,68px); font-size: .69rem; line-height: 1.75; letter-spacing: .16em; text-transform: uppercase; }
+    .photo-ribbon { position: relative; width: 100vw; overflow: hidden; }
+    .ribbon-track { display: flex; width: max-content; animation: ribbon-slide 110s linear infinite; }
+    .ribbon-set { display: flex; }
+    .ribbon-set img { width: clamp(460px, 44vw, 730px); height: min(760px, 72svh); min-height: 600px; object-fit: cover; filter: saturate(.72) contrast(.95); }
+    @keyframes ribbon-slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ribbon-title { position: absolute; z-index: 1; top: 50%; left: 50%; margin: 0; color: rgba(170,64,62,.78); font: 400 clamp(3.6rem,9vw,8rem)/.75 var(--script); letter-spacing: -.06em; text-shadow: 0 1px 20px rgba(0,0,0,.16); transform: translate(-50%,-50%); white-space: nowrap; pointer-events: none; }
+
+    main > section + section { border-top: 1px solid var(--ink); }
+    .section { padding: clamp(85px,12vw,155px) 5vw; }
+    .section__head { max-width: 760px; margin: 0 auto clamp(48px,7vw,84px); text-align: center; }
+    .section-sticker { display: block; width: clamp(145px, 17vw, 215px); aspect-ratio: 2 / 1; margin: 0 auto 26px; background: var(--ink); -webkit-mask: url("/wedding-v2/images/logo/tonnara2.png") center / contain no-repeat; mask: url("/wedding-v2/images/logo/tonnara2.png") center / contain no-repeat; }
+    .section-label { margin: 0 0 15px; color: var(--olive-dark); font-size: .68rem; text-transform: uppercase; letter-spacing: .19em; }
+    .section-label a { text-decoration-thickness: 1px; text-underline-offset: 5px; }
+    .section__head .countdown { display: flex; justify-content: center; gap: clamp(12px,2.2vw,25px); max-width: none; margin: 30px auto 42px; color: var(--ink); }
+    .countdown__unit { display: grid; gap: 5px; min-width: 48px; }
+    .countdown__value { font: 500 clamp(1.5rem,2.8vw,2.35rem)/1 var(--display); letter-spacing: -.045em; }
+    .countdown__label { font-size: .57rem; line-height: 1; letter-spacing: .15em; text-transform: uppercase; }
+    .calendar-links { display: flex; justify-content: center; gap: 16px; margin: 20px 0 0; font-size: .67rem; letter-spacing: .15em; text-transform: uppercase; }
+    .calendar-links a { text-underline-offset: 5px; }
+    h2 { margin-bottom: 13px; font: 500 clamp(3rem,5.5vw,5.5rem)/.97 var(--display); letter-spacing: -.07em; }
+    .section__head > p:not(.section-label) { max-width: 470px; margin: auto; color: rgba(170,64,62,.78); }
+    .events { max-width: 1180px; margin: auto; border-top: 1px solid var(--line); }
+    .event { display: grid; grid-template-columns: .7fr 1.3fr 1.05fr; gap: 28px; padding: 27px 0 26px; border-bottom: 1px solid var(--line); align-items: center; }
+    .event__day { font-size: .68rem; line-height: 1.7; text-transform: uppercase; letter-spacing: .16em; }
+    .event__heading { display: flex; align-items: center; justify-content: flex-start; gap: 14px; }
+    .event h3 { margin: 0; font: 500 clamp(1.7rem,3vw,2.8rem)/1 var(--display); letter-spacing: -.055em; }
+    .event-stickers { display: flex; flex: 0 0 auto; align-items: center; gap: 7px; }
+    .event-sticker { display: block; flex: 0 0 auto; width: 122px; height: 92px; background: var(--ink); -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+    .event-sticker--champagne { -webkit-mask-image: url("/wedding-v2/images/logo/champagne2.png"); mask-image: url("/wedding-v2/images/logo/champagne2.png"); }
+    .event-sticker--church { width: 84px; -webkit-mask-image: url("/wedding-v2/images/logo/church2.png"); mask-image: url("/wedding-v2/images/logo/church2.png"); }
+    .event-sticker--porsche { width: 136px; -webkit-mask-image: url("/wedding-v2/images/logo/porsche.png"); mask-image: url("/wedding-v2/images/logo/porsche.png"); }
+    .event-sticker--espresso { width: 96px; -webkit-mask-image: url("/wedding-v2/images/logo/espresso2.png"); mask-image: url("/wedding-v2/images/logo/espresso2.png"); }
+    .event__detail { color: rgba(170,64,62,.78); font-size: .89rem; }
+    .event__detail strong { display: block; color: var(--ink); font-weight: 600; }
+    .venue-link { display: block; width: fit-content; margin-bottom: 5px; color: var(--ink); font-weight: 600; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+    .venue-link::after { content: ""; display: inline-block; width: .56em; height: .56em; margin-left: .42em; border-top: 1px solid currentColor; border-right: 1px solid currentColor; background: linear-gradient(to top right, transparent 44%, currentColor 45%, currentColor 54%, transparent 55%); vertical-align: .08em; }
+    .event-link { display: block; width: max-content; margin: 32px auto 0; color: var(--olive-dark); font-size: .7rem; text-transform: uppercase; letter-spacing: .13em; text-underline-offset: 5px; }
+    .map-widget { max-width: 1180px; margin: clamp(44px,7vw,78px) auto 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .map-frame { width: 100%; min-height: 360px; border: 0; filter: saturate(.75) contrast(.95); }
+    .place-history { max-width: 1080px; margin: clamp(48px,7vw,78px) auto 0; padding-top: clamp(45px,6vw,68px); border-top: 1px solid var(--line); text-align: center; }
+    .place-history__heading { display: flex; align-items: center; justify-content: center; gap: 18px; margin-bottom: 18px; }
+    .place-history h3 { margin: 0; font: 500 clamp(2rem,3.8vw,3.2rem)/1 var(--display); letter-spacing: -.055em; }
+    .place-history__sticker { display: block; flex: 0 0 auto; width: clamp(115px,14vw,170px); height: 86px; background: var(--ink); -webkit-mask: url("/wedding-v2/images/logo/tonnara2.png") center / contain no-repeat; mask: url("/wedding-v2/images/logo/tonnara2.png") center / contain no-repeat; }
+    .place-history__copy { max-width: 820px; margin: 0 auto; color: rgba(170,64,62,.78); }
+    @media (max-width: 480px) { .place-history__heading { gap: 9px; }.place-history__sticker { width: 92px; height: 64px; } }
+
+    .party { background: var(--cream); }.party-title-row { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: clamp(10px,1.8vw,20px); }.party-title-row h2 { margin-bottom: 0; }.party-sticker { display: block; flex: 0 0 auto; width: clamp(92px,10vw,130px); height: clamp(92px,10vw,130px); background: var(--ink); -webkit-mask: url("/wedding-v2/images/logo/wedding-party-cherub-tower.png") center / contain no-repeat; mask: url("/wedding-v2/images/logo/wedding-party-cherub-tower.png") center / contain no-repeat; }.party-title-row + p { margin-top: 18px !important; }.party-columns { max-width: 950px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,10vw,160px); }.party-group { border-top: 1px solid var(--line); padding-top: 24px; }.party-group + .party-group { margin-top: 38px; }.party-role { margin: 0 0 12px; font-size: .66rem; letter-spacing: .17em; text-transform: uppercase; }.party-name { margin: 0; font: 500 clamp(1.45rem,2.3vw,2rem)/1.2 var(--display); letter-spacing: -.04em; }.party-name + .party-name { margin-top: 7px; }
+    @media (max-width: 480px) { .party-title-row { gap: 8px; }.party-title-row h2 { font-size: 2.65rem; }.party-sticker { width: 76px; height: 76px; } }
+
+    .dress { text-align: center; }.dress-choices { width: min(100%,720px); margin: 0 auto clamp(42px,6vw,68px); display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }.dress-choice { display: grid; justify-items: center; gap: 10px; min-width: 0; padding: 24px 18px 20px; color: var(--ink); background: transparent; border: 1px solid var(--ink); border-radius: 0; cursor: var(--heart-cursor); transition: color .2s, background .2s; }.dress-choice[aria-selected="true"] { color: var(--cream); background: var(--ink); }.dress-bust { display: block; width: min(100%,170px); height: 180px; background: var(--ink); -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }.dress-choice[aria-selected="true"] .dress-bust { background: var(--cream); }.dress-bust--signori { -webkit-mask-image: url("/wedding-v2/images/logo/dress-code-signori.png"); mask-image: url("/wedding-v2/images/logo/dress-code-signori.png"); }.dress-bust--signore { -webkit-mask-image: url("/wedding-v2/images/logo/dress-code-signore.png"); mask-image: url("/wedding-v2/images/logo/dress-code-signore.png"); }.dress-choice__label { font-size: .72rem; font-weight: 600; letter-spacing: .17em; text-transform: uppercase; }.dress-panel { max-width: 1100px; margin: auto; }.dress-panel[hidden] { display: none; }.dress-panel__label { margin: 0 0 18px; font-size: .66rem; letter-spacing: .17em; text-transform: uppercase; }.dress-events { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: left; }.dress-event { min-height: 220px; padding: 30px clamp(20px,3vw,42px); }.dress-event + .dress-event { border-left: 1px solid var(--line); }.dress-number { margin: 0 0 26px; font-size: .66rem; letter-spacing: .17em; text-transform: uppercase; }.dress-event h3 { margin: 0 0 18px; font: 500 clamp(1.65rem,2.7vw,2.45rem)/1 var(--display); letter-spacing: -.05em; }.dress-event > p:last-child { margin: 0; color: rgba(170,64,62,.78); font-size: .9rem; }
+    @media (max-width: 760px) { .dress-choices { width: min(100%,390px); gap: 10px; }.dress-choice { padding: 18px 8px 15px; }.dress-bust { height: 135px; }.dress-events { grid-template-columns: 1fr; }.dress-event { min-height: 0; padding: 28px 0; }.dress-event + .dress-event { border-left: 0; border-top: 1px solid var(--line); } }
+
+    .split { display: grid; grid-template-columns: minmax(300px,.9fr) minmax(360px,1.1fr); min-height: 720px; background: var(--cream); }
+    .split__photo img { width: 100%; height: 100%; min-height: 560px; object-fit: cover; filter: saturate(.8); }
+    .split__copy { display: flex; flex-direction: column; justify-content: center; max-width: 630px; padding: clamp(70px,10vw,150px) clamp(38px,10vw,142px); }
+    .split__copy h2 { margin-bottom: 23px; }
+    .split__copy > p { max-width: 455px; }
+    .stay-area { margin-top: 36px; }.stay-area + .stay-area { margin-top: 42px; padding-top: 35px; border-top: 1px solid var(--line); }.stay-area__eyebrow { margin: 0 0 8px; font-size: .64rem; letter-spacing: .17em; text-transform: uppercase; }.stay-area h3 { margin: 0 0 12px; font: 500 clamp(1.65rem,2.5vw,2.2rem)/1 var(--display); letter-spacing: -.045em; }.stay-area__copy { margin: 0; color: rgba(170,64,62,.78); font-size: .9rem; }.stay-list { margin: 23px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }.stay-tips { margin-top: 42px; padding-top: 35px; border-top: 1px solid var(--line); }.stay-tips h3 { margin: 0 0 14px; font: 500 clamp(1.45rem,2.2vw,1.9rem)/1 var(--display); letter-spacing: -.04em; }.stay-checklist { margin: 0; padding: 0; list-style: none; }.stay-checklist li { position: relative; padding: 8px 0 8px 22px; border-bottom: 1px solid var(--line); color: rgba(170,64,62,.78); font-size: .86rem; }.stay-checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--ink); }.stay-note { margin: 20px 0 0; color: rgba(170,64,62,.78); font-size: .82rem; }
+    .stay-list li { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .stay-list a { display: flex; justify-content: space-between; gap: 15px; text-decoration: none; }
+    .stay-list strong { font: 500 1.13rem/1.2 var(--display); }
+    .stay-list span { color: var(--olive-dark); font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; white-space: nowrap; }
+    .faq { background: var(--cream); }.faq-wrap { max-width: 825px; margin: auto; }.faq-list { border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }summary { cursor: var(--heart-cursor); position: relative; padding: 24px 43px 24px 0; list-style: none; font: 500 clamp(1.35rem,2.1vw,1.75rem)/1.2 var(--display); letter-spacing: -.035em; }summary::-webkit-details-marker { display: none; }summary::after { content: "+"; position: absolute; right: 2px; top: 18px; font: 400 2rem/1 var(--display); }details[open] summary::after { content: "−"; }details p { max-width: 600px; padding: 0 42px 25px 0; margin: 0; color: rgba(170,64,62,.78); }
+
+    .travel { background: var(--cream); }.travel-grid { max-width: 1080px; margin: auto; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }.travel-item { min-height: 260px; padding: 31px clamp(20px,3vw,47px) 25px 0; margin-right: clamp(20px,3vw,47px); border-right: 1px solid var(--line); }.travel-item:last-child { border-right: 0; margin-right: 0; }.travel-number { margin: 0 0 26px; font-size: .66rem; letter-spacing: .17em; }.travel-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }.travel-item h3 { margin: 0; font: 500 clamp(1.6rem,2.6vw,2.35rem)/1 var(--display); letter-spacing: -.05em; }.travel-sticker { display: block; flex: 0 0 auto; width: 94px; height: 72px; background: var(--ink); -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }.travel-sticker--plane { width: 108px; -webkit-mask-image: url("/wedding-v2/images/logo/travel-plane.png"); mask-image: url("/wedding-v2/images/logo/travel-plane.png"); }.travel-sticker--car { -webkit-mask-image: url("/wedding-v2/images/logo/travel-car.png"); mask-image: url("/wedding-v2/images/logo/travel-car.png"); }.travel-sticker--passport { width: 82px; -webkit-mask-image: url("/wedding-v2/images/logo/travel-passport-sunglasses.png"); mask-image: url("/wedding-v2/images/logo/travel-passport-sunglasses.png"); }.travel-item > p:not(.travel-number) { margin: 0; color: rgba(170,64,62,.78); font-size: .9rem; }.travel-checklist { margin: 18px 0 0; padding: 0; list-style: none; text-align: left; }.travel-checklist li { position: relative; padding: 7px 0 7px 21px; border-top: 1px solid var(--line); color: rgba(170,64,62,.82); font-size: .82rem; }.travel-checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--ink); }.travel-link { color: var(--ink); text-underline-offset: 4px; }
+    .travel-guide { max-width: 1080px; margin: clamp(58px,8vw,92px) auto 0; padding-top: clamp(45px,6vw,68px); border-top: 1px solid var(--line); }.travel-guide__intro { max-width: 760px; margin: 0 auto 38px; text-align: center; }.travel-guide__intro h3 { margin: 7px 0 15px; font: 500 clamp(2.3rem,4vw,3.6rem)/.98 var(--display); letter-spacing: -.055em; }.travel-guide__intro p:last-child { margin: 0; color: rgba(170,64,62,.78); }.travel-guide__list { border-top: 1px solid var(--line); }.travel-guide details { border-bottom: 1px solid var(--line); }.travel-guide summary { padding: 22px 45px 22px 0; font-size: clamp(1.25rem,2vw,1.7rem); }.travel-guide__body { padding: 0 0 32px; color: rgba(170,64,62,.82); font-size: .92rem; line-height: 1.7; }.travel-guide__body p { max-width: 850px; padding: 0; margin: 0 0 15px; color: inherit; }.travel-guide__body p:last-child { margin-bottom: 0; }.travel-guide__body h4 { margin: 25px 0 8px; color: var(--ink); font: 500 1.25rem/1.2 var(--display); letter-spacing: -.025em; }.travel-guide__body ul { max-width: 850px; margin: 10px 0 18px; padding: 0; list-style: none; }.travel-guide__body li { position: relative; padding: 5px 0 5px 22px; }.travel-guide__body li::before { content: "✓"; position: absolute; left: 0; color: var(--ink); }.travel-guide__body strong { color: var(--ink); }.travel-guide__address { padding-left: 18px !important; border-left: 1px solid var(--line); }.travel-guide__words { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 28px; }.travel-guide__words li { border-bottom: 1px solid var(--line); }.travel-guide__closing { margin-top: 34px; text-align: center; font: 500 clamp(1.35rem,2.2vw,1.8rem)/1.25 var(--display); color: var(--ink); }
+
+    .things { text-align: center; }.things-list { max-width: 980px; margin: 0 auto; padding: 0; list-style: none; border-top: 1px solid var(--line); text-align: left; }.things-list li { display: grid; grid-template-columns: 2.2fr 3fr; gap: clamp(24px,5vw,72px); padding: 27px 0; border-bottom: 1px solid var(--line); }.things-list strong { font: 500 clamp(1.35rem,2.3vw,1.9rem)/1.15 var(--display); letter-spacing: -.04em; }.things-list span { color: rgba(170,64,62,.78); font-size: .9rem; }.things-list a { color: inherit; text-underline-offset: 5px; }
+
+    .rsvp { background: var(--cream); color: var(--ink); }.rsvp .section-label { color: var(--ink); }.rsvp .section__head > p:not(.section-label) { color: rgba(170,64,62,.78); }.rsvp-form { width: min(100%,610px); margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 23px 20px; }.field { display: grid; gap: 8px; }.field--full { grid-column: 1 / -1; }.field label { font-size: .65rem; letter-spacing: .16em; text-transform: uppercase; }.field input,.field select,.field textarea { width: 100%; appearance: none; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 8px 0 10px; outline: none; }.field option { color: var(--ink); }.field textarea { resize: vertical; min-height: 76px; }.field input:focus,.field select:focus,.field textarea:focus { border-color: var(--ink); }.form-submit { grid-column: 1 / -1; justify-self: center; margin-top: 14px; padding: 15px 34px; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); cursor: var(--heart-cursor); border-radius: 999px; font-size: .69rem; letter-spacing: .16em; text-transform: uppercase; transition: background .2s, color .2s; }.form-submit:hover { color: var(--ink); background: transparent; }.form-status { grid-column: 1 / -1; min-height: 1.3em; margin: -5px 0 0; text-align: center; font-size: .87rem; }.rsvp-email { margin: 34px auto 0; text-align: center; font-size: .78rem; color: rgba(170,64,62,.78); }.rsvp-email a { color: var(--ink); text-underline-offset: 4px; }
+    .footer { border-top: 1px solid var(--ink); padding: 65px 5vw 30px; background: var(--cream); color: var(--ink); text-align: center; }.footer-mark { margin: 0 0 13px; font: italic 3.5rem/.8 var(--display); letter-spacing: -.07em; }.footer p:not(.footer-mark) { margin: 0; font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; }.footer-email { display: inline-block; margin-top: 18px; font-size: .72rem; letter-spacing: .13em; text-transform: uppercase; text-underline-offset: 5px; }
+    @media (max-width: 760px) { .topbar__inner { grid-template-columns: 1fr auto; padding: 0 21px; }.nav-cta { display: none; }.nav-toggle { display: block; }.nav { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 17px 21px 22px; flex-direction: column; gap: 7px; background: var(--paper); border-bottom: 1px solid var(--line); }.nav.is-open { display: flex; }.nav a { padding: 9px 0; }.hero { min-height: auto; padding: 62px 0 0; }.hero-copy { padding: 0 21px; }.ribbon-set img { width: min(170vw, 660px); min-height: 540px; height: min(700px, 70svh); object-position: center; }.hero-date { margin: 30px 0 38px; } h1 { font-size: clamp(4.7rem,22vw,6.8rem); }.section__head .countdown { gap: 11px; margin: 27px auto 38px; }.countdown__unit { min-width: 43px; }.calendar-links { flex-wrap: wrap; gap: 10px 18px; }.event { grid-template-columns: 1fr; gap: 7px; padding: 25px 0; }.event__heading { justify-content: flex-start; gap: 10px; }.event-sticker { width: 96px; height: 76px; }.event-sticker--church { width: 66px; }.event-sticker--porsche { width: 106px; }.event-sticker--espresso { width: 76px; }.event__detail { margin: 7px 0 0; }.map-frame { min-height: 310px; }.split { grid-template-columns: 1fr; }.split__photo { min-height: 400px; }.split__photo img { min-height: 400px; }.split__copy { padding: 75px 27px; }.party-columns { grid-template-columns: 1fr; gap: 38px; }.travel-grid { grid-template-columns: 1fr; }.travel-item { min-height: 0; padding: 27px 0; margin: 0; border-right: 0; border-bottom: 1px solid var(--line); }.travel-item:last-child { border-bottom: 0; }.travel-number { margin-bottom: 16px; }.travel-sticker { width: 88px; height: 66px; }.travel-sticker--plane { width: 100px; }.travel-sticker--passport { width: 76px; }.travel-guide__words { grid-template-columns: 1fr; }.things-list li { grid-template-columns: 1fr; gap: 8px; }.rsvp-form { grid-template-columns: 1fr; }.field--full,.form-submit,.form-status { grid-column: auto; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="monogram" href="#top" aria-label="Back to top">J&S</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main navigation">
+        <a href="#weekend">The days</a><a href="#travel">Travel</a><a href="#stay">Stay</a><a href="#party">Wedding party</a><a href="#dress-code">Dress code</a><a href="#things">Things to do</a><a href="#faq">FAQs</a><a href="/wedding-v2/registry.html">Registry</a><a href="/wedding-v2/our-story.html">Our story</a>
+      </nav>
+      <a class="nav-cta" href="#rsvp">RSVP</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="names">
+      <div class="hero-copy">
+        <h1 id="names">Julissa <span>and</span> Stefano</h1>
+        <br><br>
+        <p class="hero-date">September 2, 2027<br>Tonnara di Scopello<br>Sicily, Italy</p>
+      </div>
+      <div class="photo-ribbon" aria-label="Julissa and Stefano engagement photographs">
+        <div class="ribbon-track">
+          <div class="ribbon-set">
+            <img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-7.jpg" alt="Julissa and Stefano together by the sea"><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-14.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-26.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-37.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-84.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-96.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-113.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-123.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-128.jpg" alt="">
+          </div>
+          <div class="ribbon-set" aria-hidden="true">
+            <img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-7.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-14.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-26.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-37.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-84.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-96.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-113.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-123.jpg" alt=""><img src="/wedding-v2/images/slideshow-web/engagement_photoshoot_porto_cervo-128.jpg" alt="">
+          </div>
+        </div>
+        <p class="ribbon-title">See you in Scopello</p>
+      </div>
+    </section>
+
+    <section class="section" id="weekend" aria-labelledby="weekend-title">
+      <div class="section__head"><span class="section-sticker" role="img" aria-label="Illustration of Tonnara di Scopello"></span><p class="section-label"><a href="/wedding-v2/julissa-stefano-wedding.ics">September 1-3</a></p><div class="countdown" id="countdown" data-date="2027-09-01T20:00:00+02:00" aria-label="Countdown to the wedding celebrations">Counting down to Sicily...</div><h2 id="weekend-title">Three Days in Sicily</h2><p>Three days around Scopello, from the welcome dinner by the sea to our wedding day and a last morning together.</p><div class="calendar-links"><a href="/wedding-v2/julissa-stefano-wedding.ics">Apple Calendar</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Julissa%20%26%20Stefano%27s%20Wedding%20in%20Sicily&amp;dates=20270901T180000Z/20270903T110000Z&amp;details=Three%20days%20in%20Scopello%20to%20celebrate%20Julissa%20and%20Stefano.%20Welcome%20Party%3A%20September%201%2C%208%3A00%20PM%20at%20Tonnara%20di%20Scopello.%20Wedding%3A%20September%202%2C%204%3A00%20PM%20at%20Chiesa%20San%20Giuseppe%2C%20followed%20by%20cocktails%2C%20dinner%20and%20dancing%20at%20Tonnara%20di%20Scopello.%20Farewell%20Brunch%3A%20September%203%2C%2010%3A00%20AM%20at%20Ristorante%20Bar%20Nettuno%20Scopello.&amp;location=Scopello%2C%20Sicily%2C%20Italy&amp;ctz=Europe%2FRome" target="_blank" rel="noopener">Google Calendar</a></div></div>
+      <div class="events">
+        <article class="event"><p class="event__day">Wednesday<br>September 1<br>8:00 PM</p><div class="event__heading"><h3>Welcome Party</h3><span class="event-stickers" aria-hidden="true"><span class="event-sticker event-sticker--champagne"></span></span></div><p class="event__detail"><a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=Tonnara%20di%20Scopello%2C%20Scopello%2C%20Sicily%2C%20Italy" target="_blank" rel="noopener">Tonnara di Scopello</a>A relaxed Sicilian dinner by the sea to welcome everyone to Scopello.</p></article>
+        <article class="event"><p class="event__day">Thursday<br>September 2<br>4:00 PM</p><div class="event__heading"><h3>The Wedding</h3><span class="event-stickers" aria-hidden="true"><span class="event-sticker event-sticker--church"></span><span class="event-sticker event-sticker--porsche"></span></span></div><p class="event__detail"><a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=Chiesa%20San%20Giuseppe%2C%20Castellammare%20del%20Golfo%2C%20Sicily%2C%20Italy" target="_blank" rel="noopener">Chiesa San Giuseppe, Castellammare del Golfo</a>A Catholic celebration, immediately followed by cocktails, dinner, and dancing at <a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=Tonnara%20di%20Scopello%2C%20Scopello%2C%20Sicily%2C%20Italy" target="_blank" rel="noopener">Tonnara di Scopello</a></p></article>
+        <article class="event"><p class="event__day">Friday<br>September 3<br>10:00 AM</p><div class="event__heading"><h3>Farewell Brunch</h3><span class="event-stickers" aria-hidden="true"><span class="event-sticker event-sticker--espresso"></span></span></div><p class="event__detail"><a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=Ristorante%20Bar%20Nettuno%20Scopello%2C%20Sicily%2C%20Italy" target="_blank" rel="noopener">Il Nettuno - Baglio Nuovo Courtyard, Scopello</a>Coffee, cannoli and one last drink before we say arrivederci.</p></article>
+      </div>
+      <div class="map-widget" aria-label="Map centered on Tonnara di Scopello">
+        <iframe class="map-frame" title="Tonnara di Scopello on the map" loading="lazy" src="https://www.google.com/maps?q=Tonnara%20di%20Scopello%2C%20Scopello%2C%20Sicily%2C%20Italy&amp;output=embed"></iframe>
+      </div>
+    </section>
+
+    <section class="section travel" id="travel" aria-labelledby="travel-title">
+      <div class="section__head"><p class="section-label">Planning your trip</p><h2 id="travel-title">Traveling to Sicily</h2><p>We’re so happy you’re making the journey.</p></div>
+      <div class="travel-grid">
+        <article class="travel-item"><p class="travel-number">01 / Fly</p><div class="travel-heading"><h3>Arrive in Palermo</h3><span class="travel-sticker travel-sticker--plane" aria-hidden="true"></span></div><p>Palermo Airport (PMO) is the closest major airport to Scopello — allow approximately 45–60 minutes to reach the area by car. We recommend being in Sicily by August 31, ahead of the welcome party on September 1. Catania is on the other side of the island and requires a much longer drive, we do not recommend flying there.</p></article>
+        <article class="travel-item"><p class="travel-number">02 / Get around</p><div class="travel-heading"><h3>Plan your transfer</h3><span class="travel-sticker travel-sticker--car" aria-hidden="true"></span></div><p>A rental car offers the most flexibility for exploring the coast. Taxis and private transfers are also available from Palermo Airport. Reserve your car or transfer in advance, and download an offline map before arriving—coastal roads can be winding and journeys may take longer than they appear on a map.</p></article>
+        <article class="travel-item"><p class="travel-number">03 / A few essentials</p><div class="travel-heading"><h3>Come prepared</h3><span class="travel-sticker travel-sticker--passport" aria-hidden="true"></span></div><p>A quick checklist for an easy arrival:</p><ul class="travel-checklist"><li>Check passport validity and entry requirements</li><li>Confirm accommodation and airport transfer</li><li>Bring a European power adapter</li><li>Review your phone plan or arrange an eSIM</li><li>Pack medications and essentials in your carry-on</li><li>Bring comfortable shoes, sunscreen and a light evening layer</li></ul></article>
+      </div>
+      <div class="travel-guide" id="first-trip-guide">
+        <div class="travel-guide__intro"><p class="section-label">First international trip?</p><h3>We’ve got you.</h3><p>Many of you are traveling a long way—and some may be leaving the United States for the first time. Open each guide below before booking so the journey feels simple and predictable.</p></div>
+        <div class="travel-guide__list">
+          <details open><summary>When to arrive and how overnight flights work</summary><div class="travel-guide__body"><p><strong>Guests traveling from the United States, Canada or Mexico should arrive in Sicily no later than August 31.</strong> The celebrations begin September 1.</p><p>Flights from North America to Europe generally fly overnight and land on the <strong>following calendar day</strong>. If you leave Texas on August 30, you will normally arrive in Europe on August 31.</p><p>Allow extra time for delays, missed connections and jet lag. Do not plan to arrive on the day the celebrations begin. If you can arrive earlier and turn the wedding into a longer Italian vacation, even better.</p></div></details>
+          <details><summary>Booking flights from Texas</summary><div class="travel-guide__body"><h4>Your final destination</h4><p>Search from your home airport to <strong>Palermo Falcone Borsellino Airport (PMO)</strong>. There are no direct flights from Texas to Palermo, so expect at least one connection. Book the complete itinerary together—you do not need to purchase each flight separately.</p><p>Your connection may be through Rome, Milan, Paris, Frankfurt, Munich, Madrid, London or another European hub. Avoid very short international connections: allow time for immigration, security, terminal changes and unfamiliar airports.</p><h4>Do I need to stay overnight during my connection?</h4><p>No. Most guests can connect in Europe and continue directly to Palermo. A night or two in the connecting city is optional if you would enjoy breaking up the journey.</p><h4>What about Trapani?</h4><p>Trapani–Birgi Airport (TPS) is also about 52 km from the venue and may suit some itineraries, but Palermo generally offers more practical options from North America. We do not recommend Catania; it is on the other side of Sicily.</p></div></details>
+          <details><summary>From Palermo Airport to Scopello</summary><div class="travel-guide__body"><p>After landing, allow approximately 45–60 minutes by car to reach Scopello. We recommend either:</p><ul><li><strong>Renting a car</strong> if you want independence and plan to explore Sicily</li><li><strong>Reserving a private transfer</strong> if you are not comfortable driving in Italy</li></ul><p>Please do not rely on Uber around Scopello. Book your car or transfer well in advance because September remains a busy travel period.</p></div></details>
+          <details><summary>Renting a car : important tips for American guests</summary><div class="travel-guide__body"><ul><li>Reserve an <strong>automatic transmission</strong> unless you are comfortable driving manual; automatics are less common and should be booked early</li><li>Choose a <strong>small or medium-size car</strong>; Sicilian streets and parking spaces are much narrower than those in Texas</li><li>Check Italian driver’s-license and international driving-permit requirements well before traveling</li><li>Download Google Maps and the Sicily area for offline use before leaving the airport</li><li>Never leave luggage or valuables visible in a parked car</li></ul></div></details>
+          <details><summary>Driving in Sicily</summary><div class="travel-guide__body"><p>Highways are generally straightforward, but roads become narrower inside towns and villages. Drive slowly and expect a different pace from home.</p><p>Historic centers may contain <strong>ZTLs—Zona a Traffico Limitato</strong>. These restricted zones are monitored by cameras. Do not enter unless you know your vehicle is authorized.</p><h4>Venue address</h4><p class="travel-guide__address"><strong>Tonnara di Scopello</strong><br>Largo Tonnara<br>91014 Scopello TP, Italy</p><p>Wedding-day transportation and parking information will be shared closer to the date.</p></div></details>
+          <details><summary>Where to stay and what to wear</summary><div class="travel-guide__body"><p>Stay in or near <strong>Scopello</strong> or <strong>Castellammare del Golfo</strong> so you remain close to the festivities and planned transportation areas. Review our <a class="travel-link" href="#stay">Where to stay recommendations</a> before booking.</p><p>For wedding clothing, see the <a class="travel-link" href="#dress-code">Dress code section</a>. Tonnara di Scopello is a historic seaside property with natural stone and uneven ground, so keep the terrain in mind when choosing shoes.</p></div></details>
+          <details><summary>Passports and entry requirements</summary><div class="travel-guide__body"><p>U.S., Canadian and Mexican guests need a valid passport to travel to Italy. If you do not have one, apply well before 2027 rather than waiting until the wedding approaches.</p><p>Entry rules can change. Check the official Italian and European requirements for your nationality before traveling; we will update the website closer to the wedding if a European travel authorization is required.</p><p><strong>Keep your passport with you while traveling—never put it in checked luggage.</strong></p></div></details>
+          <details><summary>Money and paying in Italy</summary><div class="travel-guide__body"><p>Italy uses the <strong>euro (€)</strong>. Cards are widely accepted, but carry a small amount of cash for cafés, parking and small purchases.</p><ul><li>Tell your bank you are traveling if required</li><li>Check foreign-transaction fees and know your card PIN</li><li>Bring at least two payment methods and keep them separately</li><li>If a terminal or ATM offers dollars or euros, choose <strong>euros</strong></li></ul></div></details>
+          <details><summary>Phones, data and useful apps</summary><div class="travel-guide__body"><p>Check whether your phone plan includes international data. Options include your carrier’s international plan, an international eSIM, or a European SIM/eSIM.</p><ul><li><strong>Google Maps</strong> for navigation—download Sicily for offline use</li><li><strong>Google Translate</strong> for translations</li><li><strong>WhatsApp</strong>, commonly used in Italy</li><li>Your airline’s app for boarding passes and flight updates</li></ul><p>Make sure you will have mobile data when you land.</p></div></details>
+          <details><summary>Electricity and adapters</summary><div class="travel-guide__body"><p>Italy uses <strong>Type C, F and L outlets</strong> and 230V electricity. American plugs require a European/Italian adapter.</p><p>Most modern phone and laptop chargers accept both voltages, but check the device label. An adapter only changes the plug shape—it <strong>does not convert voltage</strong>. American hair dryers and curling irons may not be compatible, so check carefully or leave them at home.</p></div></details>
+          <details><summary>Packing checklist for Sicily</summary><div class="travel-guide__body"><ul><li>Passport, wallet, cards and required driving documents</li><li>Travel-insurance, flight and accommodation confirmations</li><li>Prescription medications in their original labeled packaging</li><li>European adapters, phone charger and portable battery</li><li>Sunglasses, sunscreen, swimsuit and comfortable walking shoes</li><li>Light layers for warm Mediterranean days and cooler evenings</li><li>Wedding attire and wedding shoes</li></ul><p>Scopello has natural stone, cobblestones and uneven surfaces, so keep the terrain in mind when choosing shoes.</p></div></details>
+          <details><summary>Carry-on luggage and medications</summary><div class="travel-guide__body"><p>Pack your <strong>wedding outfit, essential shoes, medications and valuables in your carry-on</strong>. Checked bags can be delayed, particularly on connecting international itineraries.</p><p>Bring enough prescription medication for the whole trip plus a little extra for delays. Keep it in your carry-on and, when possible, in its original labeled packaging.</p></div></details>
+          <details><summary>Eight golden rules for a first international trip</summary><div class="travel-guide__body"><ul><li>Check or apply for your passport now</li><li>Leave plenty of time for international connections</li><li>Arrive in Sicily no later than August 31</li><li>Keep your passport with you, never in checked luggage</li><li>Keep your wedding outfit in your carry-on</li><li>Download boarding passes and important reservations</li><li>Have mobile data available when you land</li><li>Expect things to work a little differently—that is part of the fun</li></ul></div></details>
+          <details><summary>A few helpful Italian words</summary><div class="travel-guide__body"><ul class="travel-guide__words"><li><strong>Ciao</strong> — Hello / Goodbye</li><li><strong>Buongiorno</strong> — Good morning / Good day</li><li><strong>Buonasera</strong> — Good evening</li><li><strong>Grazie</strong> — Thank you</li><li><strong>Per favore</strong> — Please</li><li><strong>Scusi</strong> — Excuse me</li><li><strong>Parla inglese?</strong> — Do you speak English?</li><li><strong>Dov’è…?</strong> — Where is…?</li><li><strong>Il conto, per favore</strong> — The check, please</li><li><strong>Aiuto!</strong> — Help!</li></ul><p>You do not need to speak Italian, but a warm <em>buongiorno</em> and <em>grazie</em> go a long way.</p></div></details>
+        </div>
+        <p class="travel-guide__closing">Give yourself time, enjoy the slower pace, and come ready for the sea, good food and a beautiful celebration.<br><em>Ci vediamo in Sicilia!</em></p>
+      </div>
+      <div class="place-history"><p class="section-label">Tonnara di Scopello</p><div class="place-history__heading"><h3>Our Venue</h3><span class="place-history__sticker" role="img" aria-label="Illustration of Tonnara di Scopello"></span></div><p class="place-history__copy">The village of Scopello took the form we know today in the seventeenth century, but this coastline carries a much older story. The Tonnara began as a small tuna-fishing complex around the thirteenth century and grew through the hands of the Sanclemente family, the Jesuits, and later the Florios. Its stone baglio, fishermen’s quarters, boats, and watchtower preserve centuries of maritime life beneath the Faraglioni.</p></div>
+    </section>
+
+    <section class="split" id="stay" aria-labelledby="stay-title">
+      <div class="split__photo"><img src="/wedding-v2/images/tonnara.jpg" alt="Tonnara di Scopello" loading="lazy"></div>
+      <div class="split__copy"><p class="section-label">Make a little trip out of it</p><h2 id="stay-title">Where to stay</h2><p>September is still a popular time in Sicily, so we recommend booking early. Hotels, B&amp;Bs, villas and vacation rentals are all good options—especially a shared villa for families or groups.</p>
+        <div class="stay-area"><p class="stay-area__eyebrow">About 5 minutes from the venue</p><h3>Scopello</h3><p class="stay-area__copy">Our first choice for staying close to the celebrations and enjoying a quieter Sicilian village experience.</p>
+          <ul class="stay-list">
+            <li><a href="https://hotelbagliodiscopello.com/fr/index.html" target="_blank" rel="noopener"><strong>Baglio di Scopello Hotel</strong><span>Find it ↗</span></a></li>
+            <li><a href="https://www.bagliodellozingaro.it" target="_blank" rel="noopener"><strong>Baglio dello Zingaro</strong><span>Find it ↗</span></a></li>
+            <li><a href="https://www.booking.com/hotel/it/torre-bennistra.fr.html" target="_blank" rel="noopener"><strong>Torre Bennistra</strong><span>Find it ↗</span></a></li>
+          </ul>
+        </div>
+        <div class="stay-area"><p class="stay-area__eyebrow">About 20 minutes from the venue</p><h3>Castellammare del Golfo</h3><p class="stay-area__copy">A larger seaside town with more hotels, apartments, restaurants, shops and services. It is a good option for a longer stay or if you would like more to explore within walking distance. Hotel recommendations are coming soon.</p></div>
+        <div class="stay-tips"><p class="stay-area__eyebrow">A few practical details</p><h3>Before you book</h3><ul class="stay-checklist"><li>Check the actual driving time to Tonnara di Scopello, not only the distance on the map</li><li>Look for air conditioning and recent guest reviews</li><li>Confirm parking if you plan to rent a car</li><li>Review the cancellation policy and whether restaurants or shops are walkable</li><li>Choose Scopello or Castellammare del Golfo if you hope to use wedding transportation</li></ul><p class="stay-note">Please do not rely on Uber in this area. Wedding transportation and parking details will be shared closer to the date.</p></div>
+      </div>
+    </section>
+
+    <section class="section party" id="party" aria-labelledby="party-title">
+      <div class="section__head"><div class="party-title-row"><h2 id="party-title">Wedding party</h2><span class="party-sticker" role="img" aria-label="A veiled cherub pouring champagne into a tower of glasses"></span></div><p>The people standing alongside us on this very special day.</p></div>
+      <div class="party-columns">
+        <div><div class="party-group"><p class="party-role">Parents of the groom</p><p class="party-name">Angela Sirigu</p><p class="party-name">Jean-René Duhamel</p></div><div class="party-group"><p class="party-role">Best man</p><p class="party-name">Nicolas Garcin</p></div><div class="party-group"><p class="party-role">Groomsmen</p><p class="party-name">Yoni Benamran</p><p class="party-name">Antoine Bregeaut</p><p class="party-name">Arthur Mariaud</p><p class="party-name">Massimo Pisu</p><p class="party-name">Quentin Queyrel</p></div></div>
+        <div><div class="party-group"><p class="party-role">Parents of the bride</p><p class="party-name">Imelda Saenz</p><p class="party-name">Lucio De Los Santos</p></div><div class="party-group"><p class="party-role">Maid of honor</p><p class="party-name">Brooke Bloomquist</p></div><div class="party-group"><p class="party-role">Bridesmaids</p><p class="party-name">Ava De Los Santos</p><p class="party-name" aria-label="Name to be announced">&nbsp;</p><p class="party-name" aria-label="Name to be announced">&nbsp;</p><p class="party-name" aria-label="Name to be announced">&nbsp;</p><p class="party-name" aria-label="Name to be announced">&nbsp;</p></div></div>
+      </div>
+    </section>
+
+    <section class="section dress" id="dress-code" aria-labelledby="dress-title">
+      <div class="section__head"><p class="section-label">What to wear</p><h2 id="dress-title">Dress code</h2><p>A little guidance for each celebration.</p></div>
+      <div class="dress-choices" role="tablist" aria-label="Choose dress code guidance">
+        <button class="dress-choice" type="button" role="tab" aria-selected="true" aria-controls="dress-signori" id="tab-signori"><span class="dress-bust dress-bust--signori" aria-hidden="true"></span><span class="dress-choice__label">Signori</span></button>
+        <button class="dress-choice" type="button" role="tab" aria-selected="false" aria-controls="dress-signore" id="tab-signore"><span class="dress-bust dress-bust--signore" aria-hidden="true"></span><span class="dress-choice__label">Signore</span></button>
+      </div>
+      <div class="dress-panel" id="dress-signori" role="tabpanel" aria-labelledby="tab-signori">
+        <p class="dress-panel__label">For Signori</p>
+        <div class="dress-events">
+          <article class="dress-event"><p class="dress-number">01 / Wednesday</p><h3>Welcome Party</h3><p>More details to come.</p></article>
+          <article class="dress-event"><p class="dress-number">02 / Thursday</p><h3>Wedding Day</h3><p>Wedding-day attire details for Signori are coming soon.</p></article>
+          <article class="dress-event"><p class="dress-number">03 / Friday</p><h3>Farewell Brunch</h3><p>More details to come.</p></article>
+        </div>
+      </div>
+      <div class="dress-panel" id="dress-signore" role="tabpanel" aria-labelledby="tab-signore" hidden>
+        <p class="dress-panel__label">For Signore</p>
+        <div class="dress-events">
+          <article class="dress-event"><p class="dress-number">01 / Wednesday</p><h3>Welcome Party</h3><p>More details to come.</p></article>
+          <article class="dress-event"><p class="dress-number">02 / Thursday</p><h3>Wedding Day</h3><p>Wedding-day attire details for Signore are coming soon.</p></article>
+          <article class="dress-event"><p class="dress-number">03 / Friday</p><h3>Farewell Brunch</h3><p>More details to come.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section things" id="things" aria-labelledby="things-title">
+      <div class="section__head"><p class="section-label">While you’re here</p><h2 id="things-title">Things to do</h2><p>A few ways to turn the wedding into a Sicilian escape.</p></div>
+      <ul class="things-list">
+        <li><strong><a href="https://www.visitsicily.info/en/the-zingaro-reserve/" target="_blank" rel="noopener">Hike the Zingaro Reserve ↗</a></strong><span>Enter from the Scopello side for a spectacular coastal trail and turquoise swimming coves. Bring sturdy shoes, water, sunscreen, and a swimsuit.</span></li>
+        <li><strong><a href="https://www.tonnaradiscopello.it/en/tickets/" target="_blank" rel="noopener">Swim at the Tonnara ↗</a></strong><span>Explore the open-air museum, original fishing boats, and historic rooms before swimming beneath the Faraglioni. Daily access is limited, so reserve ahead.</span></li>
+        <li><strong>Wander Castellammare del Golfo</strong><span>Stroll around the harbor and Arab-Norman castle, stop for granita or seafood, and spend a relaxed afternoon at Cala Petrolo, Cala Marina, or Plaja beach.</span></li>
+        <li><strong>See the coast from the water</strong><span>Book a half-day boat trip from Castellammare to the Faraglioni, Zingaro’s hidden coves, and San Vito Lo Capo—with plenty of time for swimming.</span></li>
+        <li><strong>Visit ancient Segesta</strong><span>About a 30-minute drive inland, Segesta’s remarkably preserved Greek temple and hillside theater make an easy cultural half-day trip.</span></li>
+        <li><strong><a href="https://www.visitsicily.info/en/erice/" target="_blank" rel="noopener">Take a day trip to Erice ↗</a></strong><span>Explore medieval lanes, churches, the Castle of Venus, and sweeping views above Trapani—then try a warm genovese pastry before heading back.</span></li>
+      </ul>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title"><div class="faq-wrap"><div class="section__head"><p class="section-label">The details</p><h2 id="faq-title">Frequently asked</h2></div><div class="faq-list">
+      <details><summary>Can I bring a plus one?</summary><p>Your invitation will say how many seats we’ve saved for you.</p></details>
+      <details><summary>Are kids welcome?</summary><p>We adore your little ones; however, unless they are specifically named on your invitation, we kindly ask that you make this an adults-only celebration.</p></details>
+      <details><summary>How do I get to Scopello?</summary><p>Fly into Palermo Falcone Borsellino Airport (PMO), then rent a car for the easiest and most flexible journey to Scopello. Alternatively, Autoservizi Russo operates coach connections from Palermo Airport to Castellammare del Golfo and also serves Scopello; airport buses depart from the clearly marked stops outside Arrivals, to the right, and tickets for this route are purchased onboard. Service may be seasonal, so please <a href="https://www.russoautoservizi.it/travel-plan/" target="_blank" rel="noopener">check the latest timetable</a> before traveling and plan a taxi or transfer for the final connection if needed. We recommend avoiding Catania Airport, which is on the opposite side of Sicily and requires a much longer drive.</p></details>
+      <details><summary>Are there going to be transportation services between events?</summary><p>More information to come soon.</p></details>
+      <details><summary>What if it rains?</summary><p>The ceremony moves inside the tonnara’s historic stone warehouse — still gorgeous, we promise.</p></details>
+      <details><summary>Is there a dress code?</summary><p>Dress-code details are coming soon.</p></details>
+      <details><summary>Gifts?</summary><p>Your presence is the gift. If you’d like to contribute to our honeymoon, please visit our <a href="/wedding-v2/registry.html">Registry</a>.</p></details>
+    </div></div></section>
+
+    <section class="section rsvp" id="rsvp" aria-labelledby="rsvp-title"><div class="section__head"><p class="section-label">Please reply by July 1, 2027</p><h2 id="rsvp-title">Will you be there?</h2><p>We can’t wait to celebrate with you.</p></div>
+      <form class="rsvp-form" id="rsvp-form">
+        <div class="field field--full"><label for="names">Name(s)</label><input id="names" name="names" required placeholder="Who’s coming?"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com"></div>
+        <div class="field"><label for="attending">Will you join us?</label><select id="attending" name="attending"><option value="yes">Wouldn’t miss it!</option><option value="no">Sadly, can’t make it</option></select></div>
+        <div class="field"><label for="guests">Number of guests</label><input id="guests" name="guests" type="number" min="0" max="10" value="1"></div>
+        <div class="field field--full"><label for="notes">Anything we should know?</label><textarea id="notes" name="notes" placeholder="Dietary needs, song requests, fun facts…"></textarea></div>
+        <button class="form-submit" type="submit">Send RSVP</button><p class="form-status" id="rsvp-status" role="status"></p>
+      </form>
+      <p class="rsvp-email">Prefer email? <a href="mailto:julissa.stefano.2027@gmail.com">julissa.stefano.2027@gmail.com</a></p>
+    </section>
+
+  </main>
+  <footer class="footer"><p class="footer-mark">J&amp;S</p><p>September 2, 2027 · Tonnara di Scopello, Sicily, Italy</p><a class="footer-email" href="mailto:julissa.stefano.2027@gmail.com">julissa.stefano.2027@gmail.com</a></footer>
+  <script>
+    const toggle = document.querySelector('.nav-toggle'); const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => { const open = nav.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', open); toggle.textContent = open ? 'Close' : 'Menu'; });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Menu'; }));
+    const dressChoices = document.querySelectorAll('.dress-choice');
+    dressChoices.forEach(choice => choice.addEventListener('click', () => {
+      dressChoices.forEach(button => {
+        const selected = button === choice;
+        button.setAttribute('aria-selected', String(selected));
+        document.getElementById(button.getAttribute('aria-controls')).hidden = !selected;
+      });
+    }));
+    const form = document.querySelector('#rsvp-form'); const status = document.querySelector('#rsvp-status');
+    form.addEventListener('submit', async event => { event.preventDefault(); status.textContent = 'Sending…'; try { const response = await fetch('/rsvp', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(Object.fromEntries(new FormData(form)))}); if (!response.ok) throw new Error('Request failed'); status.textContent = 'Grazie mille! Your RSVP has been received.'; form.reset(); } catch { status.textContent = 'Something went wrong — please email us instead.'; } });
+    const countdown = document.querySelector('#countdown');
+    if (countdown) {
+      const target = new Date(countdown.dataset.date);
+      const updateCountdown = () => {
+        const remaining = Math.max(0, target - new Date());
+        if (remaining === 0) { countdown.textContent = 'It is time!'; return; }
+        const days = Math.floor(remaining / 86400000);
+        const hours = Math.floor((remaining % 86400000) / 3600000);
+        const minutes = Math.floor((remaining % 3600000) / 60000);
+        const seconds = Math.floor((remaining % 60000) / 1000);
+        const units = [['Days', days], ['Hours', hours], ['Minutes', minutes], ['Seconds', seconds]];
+        countdown.innerHTML = units.map(([label, value]) => `<span class="countdown__unit"><span class="countdown__value">${String(value).padStart(2, '0')}</span><span class="countdown__label">${label}</span></span>`).join('');
+      };
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+  </script>
+</body>
+</html>
